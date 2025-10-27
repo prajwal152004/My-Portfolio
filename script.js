@@ -8,8 +8,8 @@ function cancel(){
 }
 // Typewriter Effect
 const texts = [
-    "Student Research Assistant",
-    "Software Developer",
+    "Cyber Security Enthusiast",
+    "AI ML Developer",
     "Cricketer"
 ]
 let speed  =100;
@@ -37,4 +37,5 @@ function eraseText(){
         setTimeout(typeWriter, 500)
     }
 }
+
 window.onload = typeWriter
