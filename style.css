@@ -339,3 +339,46 @@ section ul li:hover {
         padding: 6px;
     }
 }
+
+/* Resume Buttons Section */
+.resume-buttons {
+    display: flex;
+    justify-content: center;       /* Centers horizontally */
+    align-items: center;
+    gap: 25px;                     /* Spacing between buttons */
+    flex-wrap: wrap;               /* Stacks on small screens */
+    margin-top: 40px;
+}
+
+.resume-btn {
+    background-color: #077b32;
+    color: white;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    border: 2px solid #077b32;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(7, 123, 50, 0.4);
+}
+
+.resume-btn:hover {
+    background-color: transparent;
+    color: #077b32;
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px #077b32;
+}
+
+/* Responsive alignment */
+@media (max-width: 768px) {
+    .resume-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .resume-btn {
+        width: 80%;
+        text-align: center;
+    }
+}
