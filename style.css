@@ -350,32 +350,46 @@ section ul li:hover {
     margin-top: 40px;
 }
 
-/* Individual Button Style */
-.resume-btn {
-    display: inline-block;
-    background-color: #077b32;         /* your theme green */
-    color: white;                      /* text color */
-    text-decoration: none;             /* removes underline */
-    padding: 12px 28px;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    border: 2px solid #077b32;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 15px rgba(7, 123, 50, 0.4);
+/* =============================
+   Resume Buttons (Twin Version)
+   ============================= */
+.resume-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 40px;
 }
 
-/* Hover Effect */
+/* Button Style */
+.resume-btn {
+    display: inline-block;
+    background-color: #077b32;
+    color: white;
+    text-decoration: none;
+    padding: 12px 32px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    letter-spacing: 0.5px;
+    transition: 0.2s linear;
+    box-shadow: 0 0 40px rgba(7, 123, 50, 0.4);
+}
+
+/* Hover Style */
 .resume-btn:hover {
-    background-color: transparent;
+    scale: 1.1;
     color: #077b32;
-    transform: translateY(-4px);
-    box-shadow: 0 0 25px #077b32;
+    border: 2px solid #077b32;
+    background-color: transparent;
+    box-shadow: 0 0 40px #077b32;
     text-shadow: 0 0 8px #077b32;
 }
 
-/* Fix unwanted link color changes */
+/* Fix link color overrides */
 .resume-btn:visited,
 .resume-btn:active,
 .resume-btn:focus {
@@ -385,7 +399,7 @@ section ul li:hover {
     outline: none;
 }
 
-/* Responsive: Stack on smaller screens */
+/* Responsive layout */
 @media (max-width: 768px) {
     .resume-buttons {
         flex-direction: column;
@@ -396,5 +410,7 @@ section ul li:hover {
         text-align: center;
     }
 }
+
+
 
 
