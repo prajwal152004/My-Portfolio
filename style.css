@@ -343,35 +343,49 @@ section ul li:hover {
 /* Resume Buttons Section */
 .resume-buttons {
     display: flex;
-    justify-content: center;       /* Centers horizontally */
+    justify-content: center;
     align-items: center;
-    gap: 25px;                     /* Spacing between buttons */
-    flex-wrap: wrap;               /* Stacks on small screens */
+    gap: 25px;
+    flex-wrap: wrap;
     margin-top: 40px;
 }
 
+/* Individual Button Style */
 .resume-btn {
-    background-color: #077b32;
-    color: white;
-    text-decoration: none;
+    display: inline-block;
+    background-color: #077b32;         /* your theme green */
+    color: white;                      /* text color */
+    text-decoration: none;             /* removes underline */
     padding: 12px 28px;
     border-radius: 8px;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.1rem;
-    letter-spacing: 0.5px;
     border: 2px solid #077b32;
+    letter-spacing: 0.5px;
     transition: all 0.3s ease;
     box-shadow: 0 0 15px rgba(7, 123, 50, 0.4);
 }
 
+/* Hover Effect */
 .resume-btn:hover {
     background-color: transparent;
     color: #077b32;
     transform: translateY(-4px);
     box-shadow: 0 0 25px #077b32;
+    text-shadow: 0 0 8px #077b32;
 }
 
-/* Responsive alignment */
+/* Fix unwanted link color changes */
+.resume-btn:visited,
+.resume-btn:active,
+.resume-btn:focus {
+    color: white;
+    background-color: #077b32;
+    text-decoration: none;
+    outline: none;
+}
+
+/* Responsive: Stack on smaller screens */
 @media (max-width: 768px) {
     .resume-buttons {
         flex-direction: column;
@@ -382,3 +396,5 @@ section ul li:hover {
         text-align: center;
     }
 }
+
+
