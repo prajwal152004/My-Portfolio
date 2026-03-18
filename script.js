@@ -7,6 +7,7 @@ function cancel(){
     navbar.style.transform = "translateY(-500px)"
 }
 // Typewriter Effect
+// Typewriter Effect
 const roles = [
     "IAM Engineer",
     "Cybersecurity Engineer",
@@ -14,30 +15,33 @@ const roles = [
     "Identity Security Builder",
     "Cricketer"
 ];
-let speed  =100;
+
+let speed = 100;
 const textElements = document.querySelector(".typewriter-text");
 let textIndex = 0;
 let charcterIndex = 0;
-function typeWriter(){
-    if (charcterIndex < texts[textIndex].length){
-        textElements.innerHTML += texts[textIndex].charAt(charcterIndex);
+
+function typeWriter() {
+    if (!textElements) return;
+
+    if (charcterIndex < roles[textIndex].length) {
+        textElements.innerHTML += roles[textIndex].charAt(charcterIndex);
         charcterIndex++;
         setTimeout(typeWriter, speed);
-    }
-    else{
-        setTimeout(eraseText, 1000)
-    }
-}
-function eraseText(){
-    if(textElements.innerHTML.length > 0){
-        textElements.innerHTML = textElements.innerHTML.slice(0,-1);
-        setTimeout(eraseText, 50)
-    }
-    else{
-        textIndex = (textIndex + 1) % texts.length;
-        charcterIndex = 0;
-        setTimeout(typeWriter, 500)
+    } else {
+        setTimeout(eraseText, 1000);
     }
 }
 
-window.onload = typeWriter
+function eraseText() {
+    if (textElements.innerHTML.length > 0) {
+        textElements.innerHTML = textElements.innerHTML.slice(0, -1);
+        setTimeout(eraseText, 50);
+    } else {
+        textIndex = (textIndex + 1) % roles.length;
+        charcterIndex = 0;
+        setTimeout(typeWriter, 500);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", typeWriter);
