@@ -44,4 +44,4 @@ function eraseText() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", typeWriter);
+window.onload = typeWriter;
