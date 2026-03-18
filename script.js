@@ -7,11 +7,13 @@ function cancel(){
     navbar.style.transform = "translateY(-500px)"
 }
 // Typewriter Effect
-const texts = [
-    "Cyber Security Enthusiast",
-    "AI ML Developer",
+const roles = [
+    "IAM Engineer",
+    "Cybersecurity Engineer",
+    "Zero Trust Enthusiast",
+    "Identity Security Builder",
     "Cricketer"
-]
+];
 let speed  =100;
 const textElements = document.querySelector(".typewriter-text");
 let textIndex = 0;
